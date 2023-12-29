@@ -134,7 +134,7 @@ gst_videoplug_class_init (GstvideoplugClass * klass)
   gst_element_class_set_details_simple (gstelement_class,
       "videoplug",
       "FIXME:Generic",
-      "FIXME:Generic Template Element", " <<user@hostname.org>>");
+      "FIXME:Generic Template Element", " <<anuj.vns2007@gmail.com>>");
 
   gst_element_class_add_pad_template (gstelement_class,
       gst_static_pad_template_get (&src_factory));
@@ -242,7 +242,7 @@ gst_videoplug_chain (GstPad * pad, GstObject * parent, GstBuffer * buf)
   filter = GST_VIDEOPLUG (parent);
 
   if (filter->silent == FALSE)
-    g_print ("I'm plugged, therefore I'm in.\n");
+    g_print ("Custom Plugin Video\n");
 
   /* just push out the incoming buffer without touching it */
   return gst_pad_push (filter->srcpad, buf);
