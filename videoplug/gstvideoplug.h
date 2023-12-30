@@ -62,6 +62,8 @@ struct _Gstvideoplug
   GstPad *sinkpad, *srcpad;
 
   gboolean silent;
+  
+  gint custom;
 };
 
 G_END_DECLS

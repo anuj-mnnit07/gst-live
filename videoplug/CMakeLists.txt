@@ -19,7 +19,10 @@ ADD_DEFINITIONS(-DPACKAGE_VERSION="1.0.0"
                 -DGST_PACKAGE_ORIGIN="https://gstreamer.freedesktop.org"
 )
 
-add_library(videoplug SHARED gstvideoplug.cpp)
+add_library(videoplug SHARED
+    gstvideoplug.cpp
+    custom.cpp
+)
 target_link_libraries(videoplug
                         # PkgConfig:gtk3
                         PkgConfig::gstreamer
